@@ -93,10 +93,9 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
                             px-3 py-2.5 text-sm
                             transition
 
-                            ${
-                              isActive
-                                ? "bg-[#17375D] !text-white"
-                                : "bg-slate-50 text-slate-700 hover:bg-[#17375D]/10"
+                            ${isActive
+                              ? "bg-[#17375D] !text-white"
+                              : "bg-slate-50 text-slate-700 hover:bg-[#17375D]/10"
                             }
                           `
                           }
@@ -124,10 +123,9 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
                       font-medium
                       transition
 
-                      ${
-                        isActive
-                          ? "bg-[#17375D] !text-white"
-                          : "text-slate-700 hover:bg-slate-100"
+                      ${isActive
+                        ? "bg-[#17375D] !text-white"
+                        : "text-slate-700 hover:bg-slate-100"
                       }
                     `
                     }
@@ -145,21 +143,25 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
 
             <div className="border-t border-slate-100 p-3">
 
-              <button
+              <NavLink
+                to="/admission"
+                onClick={closeMenu}
                 className="
-                  w-full
-                  rounded-lg
-                  bg-[#17375D]
-                  py-2.5
-                  text-sm
-                  font-semibold
-                  text-white
-                  transition
-                  hover:bg-[#0F2745]
-                "
+    block
+    w-full
+    rounded-lg
+    bg-[#17375D]
+    py-2.5
+    text-center
+    text-sm
+    font-semibold
+    text-white
+    transition
+    hover:bg-[#0F2745]
+  "
               >
                 Admissions Open
-              </button>
+              </NavLink>
 
             </div>
 
