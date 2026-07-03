@@ -141,27 +141,57 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
 
             {/* Footer */}
 
-            <div className="border-t border-slate-100 p-3">
+            <div className="border-t border-slate-100 p-3 space-y-3">
 
               <NavLink
-                to="/admission"
-                onClick={closeMenu}
-                className="
+  to="/admission"
+  onClick={closeMenu}
+  className="
     block
     w-full
     rounded-lg
-    bg-[#17375D]
+    border
+    border-[#173761]
+    bg-[#173761]
     py-2.5
     text-center
     text-sm
     font-semibold
-    text-white
-    transition
-    hover:bg-[#0F2745]
+    !text-white
+    no-underline
+    transition-all
+    duration-300
+    hover:bg-[#DF0D19]
+    hover:!text-white
   "
-              >
-                Admissions Open
-              </NavLink>
+>
+  Admissions Open
+</NavLink>
+
+             <NavLink
+  to="/careers"
+  onClick={closeMenu}
+  className="
+    block
+    w-full
+    rounded-lg
+    border
+    border-[#DF0D19]
+    bg-[#DF0D19]
+    py-2.5
+    text-center
+    text-sm
+    font-semibold
+    !text-white
+    no-underline
+    transition-all
+    duration-300
+    hover:bg-[#173761]
+    hover:!text-white
+  "
+>
+  Careers
+</NavLink>
 
             </div>
 

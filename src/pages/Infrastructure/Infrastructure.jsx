@@ -5,7 +5,6 @@ import InfrastructureHero from "../../components/infrastructure/InfrastructureHe
 import InfrastructureIntro from "../../components/infrastructure/InfrastructureIntro/InfrastructureIntro";
 import FacilitiesShowcase from "../../components/infrastructure/FacilitiesShowcase/FacilitiesShowcase";
 import CampusHighlights from "../../components/infrastructure/CampusHighlights/CampusHighlights";
-import VirtualCampusTour from "../../components/infrastructure/VirtualCampusTour/VirtualCampusTour";
 
 const Infrastructure = () => {
   return (
@@ -16,7 +15,6 @@ const Infrastructure = () => {
       <InfrastructureIntro />
       <FacilitiesShowcase />
       <CampusHighlights />
-      <VirtualCampusTour />
 
       <Footer />
     </>

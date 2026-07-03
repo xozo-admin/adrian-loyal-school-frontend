@@ -67,14 +67,14 @@ const Navbar = () => {
                 <div className="flex items-center gap-3">
                   <Link
                     to="/admission"
-                    className="rounded-[0.3rem] bg-[#17375D] px-5 py-3 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.02em] !text-white transition hover:!text-white hover:bg-[#102B4A]"
+                    className="rounded-[0.3rem] bg-[#17375D] px-5 py-3 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.02em] !text-white transition hover:!text-white hover:bg-[#ED1C24]"
                   >
                     Admission
                   </Link>
 
                   <Link
                     to="/careers"
-                    className="rounded-[0.3rem] bg-[#ED1C24] px-5 py-3 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.02em] !text-white transition hover:!text-white hover:bg-[#D3131A]"
+                    className="rounded-[0.3rem] bg-[#ED1C24] px-5 py-3 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.02em] !text-white transition hover:!text-white hover:bg-[#17375D]"
                   >
                     Careers
                   </Link>
