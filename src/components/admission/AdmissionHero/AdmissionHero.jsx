@@ -24,7 +24,7 @@ const AdmissionHero = () => {
 
         <div className="max-w-2xl text-white">
 
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[6px] text-yellow-300">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[6px] text-[#D3131A]">
             ADMISSIONS 2026–27
           </p>
 
@@ -44,7 +44,7 @@ const AdmissionHero = () => {
 
             <Link
               to="#admission-form"
-              className="inline-flex items-center gap-3 rounded-full bg-[#D4A017] px-8 py-4 font-semibold text-[#17375D] transition hover:scale-105"
+              className="inline-flex items-center gap-3 rounded-full bg-[#D3131A] px-8 py-4 font-semibold text-[#17375D] transition hover:scale-105"
             >
               Apply Now
               <FaArrowRight />
@@ -52,7 +52,7 @@ const AdmissionHero = () => {
 
             <Link
               to="/contact"
-              className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-[#17375D]"
+              className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-[#D3131A] hover:text-[#17375D]"
             >
               Contact Us
             </Link>

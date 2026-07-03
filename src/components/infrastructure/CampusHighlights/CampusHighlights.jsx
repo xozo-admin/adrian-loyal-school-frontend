@@ -32,7 +32,7 @@ const CampusHighlights = () => {
   return (
     <section className="bg-white py-14 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-end">
+        {/* <div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-end">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#17375D] sm:text-sm sm:tracking-[0.24em]">
               At A Glance
@@ -47,6 +47,24 @@ const CampusHighlights = () => {
             These numbers reflect the strength of the environment students learn
             in every day, from classroom capacity to specialist facilities and
             academic resources.
+          </p>
+        </div> */}
+
+        <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-16">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.24em]">
+              At A Glance
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-[#17375D] md:text-5xl">
+              A campus experience built with scale, structure, and care.
+            </h2>
+          </div>
+
+          <p className="max-w-xl text-sm leading-7 text-slate-600 sm:text-[15px] sm:leading-8 md:text-lg md:leading-9 lg:justify-self-end">
+            These numbers reflect the strength of the environment students learn in
+            every day, from classroom capacity to specialist facilities and academic
+            resources.
           </p>
         </div>
 

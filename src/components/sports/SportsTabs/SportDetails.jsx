@@ -20,7 +20,7 @@ const SportDetails = ({ sport }) => {
 
       {/* Content */}
       <div>
-        <span className="text-xs font-semibold uppercase tracking-wider text-[#D4A017] sm:text-base">
+        <span className="text-xs font-semibold uppercase tracking-wider text-[#D3131A] sm:text-base">
           Sports Activity
         </span>
 

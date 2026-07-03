@@ -57,7 +57,7 @@ const SportsTabs = () => {
 
         <div className="mb-8 text-center sm:mb-14">
 
-          <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D4A017] sm:text-base sm:tracking-[5px]">
+          <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D3131A] sm:text-base sm:tracking-[5px]">
             Clubs & Activities
           </span>
 

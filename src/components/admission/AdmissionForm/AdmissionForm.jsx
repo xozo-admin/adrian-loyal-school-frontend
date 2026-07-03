@@ -182,7 +182,7 @@ const AdmissionForm = () => {
     <section id="admission-form" className="bg-white py-24">
       <div className="mx-auto w-[90%] max-w-7xl">
         <div className="text-center">
-          <p className="font-semibold uppercase tracking-[0.35em] text-[#D4A017]">
+          <p className="font-semibold uppercase tracking-[0.35em] text-[#D3131A]">
             Admission Form
           </p>
 

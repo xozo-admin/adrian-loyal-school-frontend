@@ -55,7 +55,7 @@ const FacilitiesShowcase = () => {
     <section id="facilities-showcase" className="bg-[#F8FAFC] py-14 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#17375D] sm:text-sm sm:tracking-[0.24em]">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.24em]">
             Featured Facilities
           </p>
 
@@ -97,7 +97,7 @@ const FacilitiesShowcase = () => {
                 </div>
 
                 <div className="flex flex-col justify-center p-5 sm:p-8 md:p-10">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D4A017]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D3131A]">
                     Infrastructure
                   </p>
 

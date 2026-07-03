@@ -11,7 +11,7 @@ const GalleryFilter = () => {
     <section className="bg-white py-20">
       <div className="w-[90%] max-w-7xl mx-auto">
         <div className="mb-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#17375D]">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D3131A]">
             School Moments
           </p>
 

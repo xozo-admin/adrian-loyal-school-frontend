@@ -6,7 +6,7 @@ const ClubGallery = ({ images }) => {
 
       <div className="mb-6 sm:mb-8">
 
-        <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D4A017] sm:text-base sm:tracking-[4px]">
+        <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D3131A] sm:text-base sm:tracking-[4px]">
           Gallery
         </span>
 

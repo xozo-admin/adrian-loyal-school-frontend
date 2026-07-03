@@ -38,7 +38,7 @@ const LearningApproach = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:w-[90%] lg:px-0">
 
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D4A017] sm:text-base sm:tracking-[0.3em]">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D3131A] sm:text-base sm:tracking-[0.3em]">
             Our Learning Approach
           </p>
 
@@ -55,7 +55,7 @@ const LearningApproach = () => {
         <div className="relative mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:mt-16 sm:gap-10 md:grid-cols-2 xl:mt-20 xl:grid-cols-4">
 
           {/* Connecting line (desktop) */}
-          <div className="absolute left-0 right-0 top-10 hidden h-1 bg-[#D4A017] xl:block"></div>
+          <div className="absolute left-0 right-0 top-10 hidden h-1 bg-[#D3131A] xl:block"></div>
 
           {steps.map((step) => (
             <div

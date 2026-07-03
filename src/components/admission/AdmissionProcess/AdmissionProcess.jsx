@@ -53,7 +53,7 @@ const AdmissionProcess = () => {
 
         <div className="text-center">
 
-          <p className="font-semibold uppercase tracking-[0.35em] text-[#D4A017]">
+          <p className="font-semibold uppercase tracking-[0.35em] text-[#D3131A]">
             Admission Process
           </p>
 
@@ -74,7 +74,7 @@ const AdmissionProcess = () => {
 
           {/* Line */}
 
-          <div className="absolute left-0 right-0 top-12 hidden h-1 bg-[#D4A017]/30 lg:block"></div>
+          <div className="absolute left-0 right-0 top-12 hidden h-1 bg-[#D3131A]/30 lg:block"></div>
 
           <div className="grid gap-8 lg:grid-cols-5">
 
@@ -95,7 +95,7 @@ const AdmissionProcess = () => {
 
                 <div className="mt-6">
 
-                  <span className="text-sm font-bold tracking-widest text-[#D4A017]">
+                  <span className="text-sm font-bold tracking-widest text-[#D3131A]">
                     STEP {step.id}
                   </span>
 

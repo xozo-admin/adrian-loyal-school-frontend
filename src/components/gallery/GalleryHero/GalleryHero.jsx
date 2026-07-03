@@ -18,10 +18,9 @@ const GalleryHero = () => {
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="text-center text-white">
 
-          <p className="text-2xl uppercase tracking-[0.3em] font-semibold">
+          <p className="mb-4 text-3xl font-bold sm:mb-5 sm:text-4xl lg:text-5xl">
             Memories • Moments • Achievements
           </p>
-
 
           <p className="mt-6 mx-auto max-w-2xl text-lg text-gray-200">
             Explore the memorable moments, achievements, campus life,

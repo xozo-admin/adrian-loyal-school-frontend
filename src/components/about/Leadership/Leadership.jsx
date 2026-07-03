@@ -35,7 +35,7 @@ const Leadership = () => {
     <section className="bg-white py-14 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#17375D] sm:text-sm sm:tracking-[0.24em]">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.24em]">
             Leadership Team
           </p>
 
@@ -59,7 +59,7 @@ const Leadership = () => {
               </div>
 
               <div className="p-5 sm:p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#D4A017]">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#D3131A]">
                   {leader.role}
                 </p>
 

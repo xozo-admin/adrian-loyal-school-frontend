@@ -103,7 +103,7 @@ const ContactSection = () => {
       <div className="mx-auto w-[90%] max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#17375D]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D3131A]">
               Contact Information
             </p>
 
@@ -143,7 +143,7 @@ const ContactSection = () => {
           </div>
 
           <div className="rounded-[2rem] border border-slate-200 bg-[#F8FAFC] p-8 md:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#17375D]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D3131A]">
               Send Message
             </p>
 

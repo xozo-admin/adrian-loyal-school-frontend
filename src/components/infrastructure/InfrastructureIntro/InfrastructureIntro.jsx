@@ -52,7 +52,7 @@ const InfrastructureIntro = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div>
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#17375D] sm:text-sm sm:tracking-[0.24em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.24em]">
               Built Around Students
             </p>
 

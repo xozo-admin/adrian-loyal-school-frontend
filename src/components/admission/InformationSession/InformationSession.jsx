@@ -20,7 +20,7 @@ const InformationSession = () => {
 
         <div>
 
-          <p className="font-semibold uppercase tracking-[0.35em] text-[#D4A017] py-5">
+          <p className="font-semibold uppercase tracking-[0.35em] text-[#D3131A] py-5">
             Information Session
           </p>
 
