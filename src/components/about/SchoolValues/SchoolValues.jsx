@@ -54,45 +54,50 @@ const values = [
 
 const SchoolValues = () => {
   return (
-    <section className="bg-white py-14 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.24em]">
-            Our Core Values
+   <section className="bg-white py-16 sm:py-20 lg:py-24">
+  <div className="mx-auto w-[90%] max-w-7xl">
+    {/* Heading */}
+    <div className="max-w-4xl">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.24em]">
+        Our Core Values
+      </p>
+
+      <h2 className="mt-3 text-3xl font-bold leading-tight text-[#17375D] sm:mt-4 sm:text-4xl lg:text-5xl">
+        The Principles Behind Everyday Learning
+      </h2>
+
+      <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:mt-5 sm:text-base sm:leading-8 lg:text-lg">
+        Our values shape the way students learn, collaborate, and grow into
+        thoughtful, responsible individuals.
+      </p>
+    </div>
+
+    {/* Value Cards */}
+    <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+      {values.map((value) => (
+        <article
+          key={value.id}
+          className="rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg sm:p-6 lg:rounded-[2rem] lg:p-8"
+        >
+          {/* Icon */}
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-xl text-[#17375D] shadow-sm sm:h-14 sm:w-14 sm:rounded-2xl sm:text-2xl">
+            {value.icon}
+          </div>
+
+          {/* Title */}
+          <h3 className="mt-4 text-xl font-bold text-[#17375D] sm:mt-5 sm:text-2xl">
+            {value.title}
+          </h3>
+
+          {/* Description */}
+          <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            {value.description}
           </p>
-
-          <h2 className="mt-4 text-3xl font-bold text-[#17375D] md:text-5xl">
-            The Principles Behind Everyday Learning
-          </h2>
-
-          <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-            Our values shape the way students learn, collaborate, and grow into
-            thoughtful, responsible individuals.
-          </p>
-        </div>
-
-        <div className="mt-8 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-          {values.map((value) => (
-            <article
-              key={value.id}
-              className="rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:-translate-y-1 hover:border-slate-300 sm:rounded-[2rem] sm:p-8"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-xl text-[#17375D] shadow-sm sm:h-14 sm:w-14 sm:rounded-2xl sm:text-2xl">
-                {value.icon}
-              </div>
-
-              <h3 className="mt-4 text-xl font-bold text-[#17375D] sm:mt-6 sm:text-2xl">
-                {value.title}
-              </h3>
-
-              <p className="mt-3 text-sm leading-7 text-slate-600 sm:mt-4 sm:text-base sm:leading-8">
-                {value.description}
-              </p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
   );
 };
 

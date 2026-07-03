@@ -3,103 +3,38 @@ import sessionImg from "../../../assets/images/admission/information-sesssion.pn
 
 const InformationSession = () => {
   return (
-    <section className="bg-[#F8FAFC] py-24">
-      <div className="mx-auto grid w-[90%] max-w-7xl items-center gap-16 lg:grid-cols-2">
+   <section className="bg-[#F8FAFC] py-16 sm:py-20 lg:py-24">
+  <div className="mx-auto grid w-[90%] max-w-7xl items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
+    {/* Left Image */}
+    <div className="overflow-hidden rounded-2xl shadow-xl lg:rounded-3xl">
+      <img
+        src={sessionImg}
+        alt="Admission Information Session"
+        className="h-[250px] w-full object-cover transition duration-500 hover:scale-105 sm:h-[350px] lg:h-[500px]"
+      />
+    </div>
 
-        {/* Left Image */}
+    {/* Right Content */}
+    <div>
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.3em]">
+        Information Session
+      </p>
 
-        <div className="overflow-hidden rounded-3xl shadow-xl">
-          <img
-            src={sessionImg}
-            alt="Admission Information Session"
-            className="h-[500px] w-full object-cover transition duration-500 hover:scale-105"
-          />
-        </div>
+      <h2 className="mt-3 text-3xl font-bold text-[#17375D] sm:mt-4 sm:text-4xl lg:text-5xl">
+        Visit Our Campus
+      </h2>
 
-        {/* Right Content */}
-
-        <div>
-
-          <p className="font-semibold uppercase tracking-[0.35em] text-[#D3131A] py-5">
-            Information Session
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold text-[#17375D] md:text-5xl">
-            Visit Our Campus
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-           Parents are invited to meet teachers every Thursday between 3:45 PM and 5:00 PM. This is a great opportunity to discuss the child’s progress, ask questions, and build a strong partnership between home and school
-          </p>
-
-          {/* Details */}
-
-          {/* <div className="mt-10 space-y-6">
-
-            <div className="flex items-center gap-5 rounded-2xl bg-white p-5 shadow-sm">
-
-              <div className="rounded-full bg-[#17375D] p-4 text-white">
-                <FaCalendarAlt />
-              </div>
-
-              <div>
-                <h4 className="font-bold text-[#17375D]">
-                  Every Thursday 
-                </h4>
-
-                <p className="text-gray-600">
-                  Admission Information Session
-                </p>
-              </div>
-
-            </div>
-
-            <div className="flex items-center gap-5 rounded-2xl bg-white p-5 shadow-sm">
-
-              <div className="rounded-full bg-[#17375D] p-4 text-white">
-                <FaClock />
-              </div>
-
-              <div>
-                <h4 className="font-bold text-[#17375D]">
-                  Time
-                </h4>
-
-                <p className="text-gray-600">
-                  3:45 PM –  5:00 PM
-                </p>
-              </div>
-
-            </div>
-
-            <div className="flex items-center gap-5 rounded-2xl bg-white p-5 shadow-sm">
-
-              <div className="rounded-full bg-[#17375D] p-4 text-white">
-                <FaMapMarkerAlt />
-              </div>
-
-              <div>
-                <h4 className="font-bold text-[#17375D]">
-                  Venue
-                </h4>
-
-                <p className="text-gray-600">
-                  The Adrian Loyal School Campus, Karur
-                </p>
-              </div>
-
-            </div>
-
-          </div> */}
-
-          {/* <button className="mt-10 rounded-full bg-[#17375D] px-8 py-4 font-semibold text-white transition hover:bg-[#10243A]">
-            Book a Campus Visit
-          </button> */}
-
-        </div>
-
-      </div>
-    </section>
+      <p className="mt-4 text-sm leading-7 text-gray-600 sm:mt-6 sm:text-base sm:leading-8 lg:text-lg">
+        Parents are invited to meet teachers every Thursday between
+        <span className="font-semibold text-[#17375D]">
+          {" "}3:45 PM and 5:00 PM
+        </span>.
+        This is a great opportunity to discuss your child's progress,
+        ask questions, and build a strong partnership between home and school.
+      </p>
+    </div>
+  </div>
+</section>
   );
 };
 

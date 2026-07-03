@@ -32,72 +32,88 @@ const Achievements = () => {
   }, []);
 
   return (
-    <section className="bg-white py-14 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mb-9 text-center sm:mb-16">
-          <h2 className="text-3xl font-bold text-[#16324F] sm:text-5xl">
-            Achievements & Accolades
-          </h2>
-        </div>
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
+  <div className="mx-auto w-[90%] max-w-7xl">
+    {/* Heading */}
+    <div className="mb-10 text-center sm:mb-14 lg:mb-16">
+      <h2 className="text-3xl font-bold text-[#16324F] sm:text-4xl lg:text-5xl">
+        Achievements & Accolades
+      </h2>
 
-        {items.length > 0 ? (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-            {items.map((achievement) => (
-              <div
-                key={achievement.id}
-                onClick={() => setSelected(achievement)}
-                className="cursor-pointer"
-              >
-                <AchievementCard achievement={achievement} />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-3xl border border-dashed border-slate-300 bg-slate-50 px-6 py-14 text-center text-lg text-slate-500">
-            No achievements uploaded yet.
-          </div>
-        )}
-      </div>
+      <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:text-lg">
+        Celebrating the accomplishments and milestones that reflect our
+        students' dedication, talent, and pursuit of excellence.
+      </p>
+    </div>
 
-      <AnimatePresence>
-        {selected && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelected(null)}
+    {/* Achievement Cards */}
+    {items.length > 0 ? (
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        {items.map((achievement) => (
+          <div
+            key={achievement.id}
+            onClick={() => setSelected(achievement)}
+            className="cursor-pointer"
           >
-            <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-[90dvh] w-full max-w-5xl overflow-y-auto rounded-xl bg-white"
-            >
-              <img
-                src={selected.image}
-                alt={selected.title || "Achievement"}
-                className="max-h-[80vh] w-full object-contain"
-              />
+            <AchievementCard achievement={achievement} />
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-6 py-14 text-center text-base text-slate-500 lg:rounded-[2rem] lg:text-lg">
+        No achievements uploaded yet.
+      </div>
+    )}
+  </div>
 
-              {selected.title || selected.description ? (
-                <div className="p-4 sm:p-6">
-                  {selected.title ? (
-                    <h3 className="text-xl font-bold sm:text-2xl">{selected.title}</h3>
-                  ) : null}
-                  {selected.description ? (
-                    <p className={`${selected.title ? "mt-3" : ""} text-gray-600`}>
-                      {selected.description}
-                    </p>
-                  ) : null}
-                </div>
-              ) : null}
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
+  {/* Lightbox */}
+  <AnimatePresence>
+    {selected && (
+      <motion.div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setSelected(null)}
+      >
+        <motion.div
+          initial={{ scale: 0.9 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.9 }}
+          transition={{ duration: 0.25 }}
+          onClick={(e) => e.stopPropagation()}
+          className="max-h-[90vh] w-full max-w-5xl overflow-hidden rounded-2xl bg-white shadow-2xl lg:rounded-[2rem]"
+        >
+          <img
+            src={selected.image}
+            alt={selected.title || "Achievement"}
+            className="max-h-[75vh] w-full object-contain bg-slate-50"
+          />
+
+          {(selected.title || selected.description) && (
+            <div className="p-5 sm:p-6 lg:p-8">
+              {selected.title && (
+                <h3 className="text-2xl font-bold text-[#16324F]">
+                  {selected.title}
+                </h3>
+              )}
+
+              {selected.description && (
+                <p
+                  className={`${
+                    selected.title ? "mt-4" : ""
+                  } text-sm leading-7 text-slate-600 sm:text-base sm:leading-8`}
+                >
+                  {selected.description}
+                </p>
+              )}
+            </div>
+          )}
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</section>
   );
 };
 

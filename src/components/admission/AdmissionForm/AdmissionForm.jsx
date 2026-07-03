@@ -182,15 +182,15 @@ const AdmissionForm = () => {
     <section id="admission-form" className="bg-white py-24">
       <div className="mx-auto w-[90%] max-w-7xl">
         <div className="text-center">
-          <p className="font-semibold uppercase tracking-[0.35em] text-[#D3131A]">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.3em]">
             Admission Form
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold text-[#17375D] md:text-5xl">
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-[#17375D] sm:mt-4 sm:text-4xl lg:text-5xl">
             Start Your Child&apos;s Admission Journey
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-gray-600 sm:mt-6 sm:text-base sm:leading-8 lg:text-lg">
             Fill in the details below and our admission team will get in touch
             with you shortly.
           </p>
@@ -199,11 +199,10 @@ const AdmissionForm = () => {
         <div className="mt-16 rounded-[2rem] bg-[#F8FAFC] p-8 shadow-xl md:p-12">
           {submitMessage.text ? (
             <div
-              className={`mb-6 rounded-2xl border px-5 py-4 ${
-                submitMessage.type === "error"
+              className={`mb-6 rounded-2xl border px-5 py-4 ${submitMessage.type === "error"
                   ? "border-red-200 bg-red-50 text-red-700"
                   : "border-emerald-200 bg-emerald-50 text-emerald-700"
-              }`}
+                }`}
             >
               {submitMessage.text}
             </div>
@@ -326,9 +325,8 @@ const AdmissionForm = () => {
 
             <div>
               <div
-                className={`flex items-center border-b px-3 py-4 ${
-                  errors.fatherPhone ? "border-[#D62828]" : "border-[#17375D]"
-                }`}
+                className={`flex items-center border-b px-3 py-4 ${errors.fatherPhone ? "border-[#D62828]" : "border-[#17375D]"
+                  }`}
               >
                 <span className="mr-3 whitespace-nowrap text-sm text-[#17375D]">
                   +91
@@ -377,9 +375,8 @@ const AdmissionForm = () => {
 
             <div>
               <div
-                className={`flex items-center border-b px-3 py-4 ${
-                  errors.motherPhone ? "border-[#D62828]" : "border-[#17375D]"
-                }`}
+                className={`flex items-center border-b px-3 py-4 ${errors.motherPhone ? "border-[#D62828]" : "border-[#17375D]"
+                  }`}
               >
                 <span className="mr-3 whitespace-nowrap text-sm text-[#17375D]">
                   +91

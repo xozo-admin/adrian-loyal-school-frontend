@@ -43,63 +43,67 @@ const CurriculumHighlights = () => {
   };
 
   return (
-    <section className="bg-white py-14 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:w-[90%] lg:px-0">
-        <div className="max-w-5xl">
-          <div className="divide-y divide-[#17375D] border-y border-[#17375D]">
-            {detailSections.map((section) => {
-              const isOpen = openSection === section.title;
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
+  <div className="mx-auto w-[90%] max-w-7xl">
+    <div className="max-w-5xl">
+      <div className="divide-y divide-[#17375D] border-y border-[#17375D]">
+        {detailSections.map((section) => {
+          const isOpen = openSection === section.title;
 
-              return (
-                <div key={section.title} className="py-4 sm:py-6">
-                  <button
-                    type="button"
-                    onClick={() => toggleSection(section.title)}
-                    className="flex w-full items-center justify-between gap-3 text-left sm:gap-4"
-                  >
-                    <span
-                      className={`text-lg leading-snug transition-colors sm:text-2xl md:text-4xl ${
-                        isOpen ? "text-[#E11D2E]" : "text-[#17375D]"
-                      }`}
-                    >
-                      {section.title}
-                    </span>
+          return (
+            <div key={section.title} className="py-4 sm:py-6 lg:py-7">
+              <button
+                type="button"
+                onClick={() => toggleSection(section.title)}
+                className="flex w-full items-center justify-between gap-4 text-left"
+              >
+                <span
+                  className={`text-xl font-medium leading-tight transition-colors sm:text-2xl lg:text-4xl ${
+                    isOpen ? "text-[#E11D2E]" : "text-[#17375D]"
+                  }`}
+                >
+                  {section.title}
+                </span>
 
-                    <span
-                      className={`shrink-0 text-2xl leading-none text-slate-500 transition-transform duration-300 sm:text-3xl ${
-                        isOpen ? "rotate-90" : "rotate-0"
-                      }`}
-                    >
-                      ›
-                    </span>
-                  </button>
+                <span
+                  className={`shrink-0 text-xl text-slate-500 transition-transform duration-300 sm:text-2xl lg:text-3xl ${
+                    isOpen ? "rotate-90" : "rotate-0"
+                  }`}
+                >
+                  ›
+                </span>
+              </button>
 
-                  {isOpen ? (
-                    <div className="pt-4 text-sm leading-7 text-slate-600 sm:pt-6 sm:text-[1.02rem] sm:leading-8 md:text-[1.12rem] md:leading-[1.9]">
-                      <div className="space-y-5 sm:space-y-8">
-                        {section.content.map((paragraph) => (
-                          <p key={paragraph}>{paragraph}</p>
-                        ))}
-                      </div>
+              {isOpen && (
+                <div className="pt-4 text-sm leading-7 text-slate-600 sm:pt-5 sm:text-base sm:leading-8 lg:pt-6 lg:text-lg lg:leading-9">
+                  <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+                    {section.content.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
 
-                      {section.bullets ? (
-                        <ul className="mt-6 space-y-2 pl-5">
-                          {section.bullets.map((bullet) => (
-                            <li key={bullet}>{bullet}</li>
-                          ))}
-                        </ul>
-                      ) : null}
+                  {section.bullets && (
+                    <ul className="mt-5 list-disc space-y-2 pl-5 sm:mt-6 sm:space-y-3 lg:pl-6">
+                      {section.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
 
-                      {section.footer ? <p className="mt-6">{section.footer}</p> : null}
-                    </div>
-                  ) : null}
+                  {section.footer && (
+                    <p className="mt-5 sm:mt-6">
+                      {section.footer}
+                    </p>
+                  )}
                 </div>
-              );
-            })}
-          </div>
-        </div>
+              )}
+            </div>
+          );
+        })}
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 };
 

@@ -4,66 +4,56 @@ import { FaArrowRight } from "react-icons/fa";
 
 const AdmissionHero = () => {
   return (
-    <section className="relative h-[70vh] overflow-hidden">
+    <section className="relative h-[60vh] overflow-hidden sm:h-[65vh] lg:h-[70vh]">
+  {/* Background Image */}
+  <img
+    src={hero}
+    alt="Admissions"
+    className="absolute inset-0 h-full w-full object-cover"
+  />
 
-      {/* Background Image */}
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-[#17375D]/45"></div>
 
-      <img
-        src={hero}
-        alt="Admissions"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+  {/* Content */}
+  <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 sm:px-8 lg:px-10">
+    <div className="max-w-xl text-white lg:max-w-2xl">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[3px] text-[#D3131A] sm:mb-4 sm:text-sm sm:tracking-[5px] lg:tracking-[6px]">
+        ADMISSIONS 2026–27
+      </p>
 
-      {/* Overlay */}
+      <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+        Begin Your Child's
+        <br />
+        Learning Journey
+      </h1>
 
-      <div className="absolute inset-0 bg-[#17375D]/45"></div>
+      <p className="mt-4 text-sm leading-7 text-gray-200 sm:mt-5 sm:text-base sm:leading-8 lg:mt-6 lg:text-lg">
+        Join The Adrian Loyal School and provide your child
+        with a nurturing environment that inspires academic
+        excellence, creativity, leadership, and lifelong learning.
+      </p>
 
-      {/* Content */}
+      {/* Buttons */}
+      <div className="mt-8 flex flex-col items-start gap-3 sm:mt-10 sm:flex-row">
+        <Link
+          to="#admission-form"
+          className="inline-flex w-auto items-center justify-center gap-2 rounded-full bg-[#D3131A] px-5 py-2 text-sm font-semibold text-white transition hover:scale-105 sm:gap-3 sm:px-8 sm:py-4 sm:text-base"
+        >
+          Apply Now
+          <FaArrowRight className="text-sm" />
+        </Link>
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6">
-
-        <div className="max-w-2xl text-white">
-
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[6px] text-[#D3131A]">
-            ADMISSIONS 2026–27
-          </p>
-
-          <h1 className="text-4xl font-bold leading-tight md:text-5xl">
-            Begin Your Child's
-            <br />
-            Learning Journey
-          </h1>
-
-          <p className="mt-6 text-lg leading-8 text-gray-200">
-            Join The Adrian Loyal School and provide your child
-            with a nurturing environment that inspires academic
-            excellence, creativity, leadership, and lifelong learning.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-5">
-
-            <Link
-              to="#admission-form"
-              className="inline-flex items-center gap-3 rounded-full bg-[#D3131A] px-8 py-4 font-semibold text-[#17375D] transition hover:scale-105"
-            >
-              Apply Now
-              <FaArrowRight />
-            </Link>
-
-            <Link
-              to="/contact"
-              className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-[#D3131A] hover:text-[#17375D]"
-            >
-              Contact Us
-            </Link>
-
-          </div>
-
-        </div>
-
+        <Link
+          to="/contact"
+          className="inline-flex w-auto items-center justify-center rounded-full border-2 border-white px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#D3131A] hover:text-[#17375D] sm:px-8 sm:py-4 sm:text-base"
+        >
+          Contact Us
+        </Link>
       </div>
-
-    </section>
+    </div>
+  </div>
+</section>
   );
 };
 

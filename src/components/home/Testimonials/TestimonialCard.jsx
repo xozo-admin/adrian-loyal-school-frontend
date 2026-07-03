@@ -12,55 +12,60 @@ const TestimonialCard = ({ testimonial }) => {
 
   return (
     <>
-      <div className="mx-auto max-w-10xl">
+      <div className="mx-auto max-w-5xl">
+  <p className="text-sm leading-7 text-[#4B4B4B] sm:text-base sm:leading-8 lg:text-lg lg:leading-9">
+    {showFull ? testimonial.review : shortReview}
+  </p>
 
-        <p className="text-sm leading-7 text-[#4B4B4B] sm:text-base sm:leading-[2]">
-          {showFull ? testimonial.review : shortReview}
-        </p>
+  {testimonial.review.length > limit && (
+    <button
+      onClick={() => setShowFull(true)}
+      className="mt-4 text-sm font-medium text-[#173A67] transition hover:text-[#D3131A] hover:underline sm:text-base"
+    >
+      Read More
+    </button>
+  )}
 
-        {testimonial.review.length > limit && (
-          <button
-            onClick={() => setShowFull(true)}
-            className="mt-3 text-[#173A67] hover:underline"
-          >
-            Read More
-          </button>
-        )}
+  <div className="mt-8 sm:mt-10 lg:mt-12">
+    <h3
+      className="text-xl font-semibold text-[#173A67] sm:text-2xl lg:text-3xl"
+      style={{ fontFamily: "Cormorant Garamond" }}
+    >
+      {testimonial.name}
+    </h3>
 
-        <div className="mt-7 sm:mt-12">
-          <h3 className="text-[18px] font-medium text-[#173A67]"  style={{ fontFamily: "Cormorant Garamond" }}>
-            {testimonial.name}
-          </h3>
+    <p className="mt-2 text-base font-medium text-[#E11D2E] sm:text-lg lg:text-xl">
+      {testimonial.role}
+    </p>
+  </div>
+</div>
 
-          <p className="mt-2 text-[18px] text-[#E11D2E]">
-            {testimonial.role}
-          </p>
-        </div>
+{/* Popup */}
+{showFull && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 sm:p-6">
+    <div className="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl sm:p-8 lg:rounded-[2rem] lg:p-10">
+      <h3
+        className="mb-4 text-2xl font-bold text-[#173A67] sm:text-3xl lg:text-4xl"
+        style={{ fontFamily: "Cormorant Garamond" }}
+      >
+        {testimonial.name}
+      </h3>
 
+      <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:text-lg lg:leading-9">
+        {testimonial.review}
+      </p>
+
+      <div className="mt-8 flex justify-end">
+        <button
+          onClick={() => setShowFull(false)}
+          className="rounded-full bg-[#173A67] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#0F2745] sm:px-8 sm:text-base"
+        >
+          Close
+        </button>
       </div>
-
-      {showFull && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 sm:p-6">
-          <div className="max-h-[90dvh] w-full max-w-4xl overflow-y-auto rounded-xl bg-white p-5 shadow-xl sm:p-10">
-
-            <h3 className="mb-4 text-2xl font-semibold text-[#173A67] sm:mb-6 sm:text-3xl">
-              {testimonial.name}
-            </h3>
-
-            <p className="text-sm leading-7 text-gray-700 sm:text-base sm:leading-9">
-              {testimonial.review}
-            </p>
-
-            <button
-              onClick={() => setShowFull(false)}
-              className="mt-8 rounded-lg bg-[#173A67] px-6 py-3 text-white"
-            >
-              Close
-            </button>
-
-          </div>
-        </div>
-      )}
+    </div>
+  </div>
+)}
     </>
   );
 };

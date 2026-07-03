@@ -23,47 +23,45 @@ const features = [
 
 const SportsIntro = () => {
   return (
-    <section className="bg-white py-14 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
+  <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    {/* Heading */}
+    <div className="mb-10 text-center sm:mb-14">
+      <h2 className="text-3xl font-bold leading-tight text-[#16324F] sm:text-4xl lg:text-5xl">
+        Building Champions Beyond the Classroom
+      </h2>
 
-        {/* Heading */}
-        <div className="mb-8 text-center sm:mb-14">
-          <h2 className="text-3xl font-bold text-[#16324F] sm:text-4xl">
-            Building Champions Beyond the Classroom
-          </h2>
+      <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-gray-600 sm:mt-5 sm:text-base sm:leading-8 lg:mt-6 lg:text-lg">
+        At Adrian Loyal School, sports and extracurricular activities are
+        an essential part of every student's growth. We encourage every
+        child to stay active, build confidence, and develop leadership
+        through participation.
+      </p>
+    </div>
 
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
-            At Adrian Loyal School, sports and extracurricular activities are
-            an essential part of every student's growth. We encourage every
-            child to stay active, build confidence, and develop leadership
-            through participation.
+    {/* Cards */}
+    <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+      {features.map((item, index) => (
+        <div
+          key={index}
+          className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl sm:p-6 lg:p-8"
+        >
+          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#16324F] text-white sm:h-14 sm:w-14 lg:h-16 lg:w-16">
+            {item.icon}
+          </div>
+
+          <h3 className="mb-3 text-xl font-semibold text-[#16324F] sm:text-2xl">
+            {item.title}
+          </h3>
+
+          <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
+            {item.description}
           </p>
         </div>
-
-        {/* Cards */}
-        <div className="grid gap-4 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl sm:p-8"
-            >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#16324F] text-white sm:mb-5 sm:h-16 sm:w-16">
-                {item.icon}
-              </div>
-
-              <h3 className="mb-2 text-xl font-semibold text-[#16324F] sm:mb-3 sm:text-2xl">
-                {item.title}
-              </h3>
-
-              <p className="text-sm leading-7 text-gray-600 sm:text-base">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
   );
 };
 

@@ -2,39 +2,35 @@ import { motion } from "framer-motion";
 
 const ClubGallery = ({ images }) => {
   return (
-    <section className="mt-10 sm:mt-16">
+    <section className="mt-12 sm:mt-16 lg:mt-20">
+  {/* Heading */}
+  <div className="mb-8 sm:mb-10">
+    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D3131A] sm:text-sm sm:tracking-[0.25em] lg:text-base lg:tracking-[0.3em]">
+      Gallery
+    </span>
 
-      <div className="mb-6 sm:mb-8">
+    <h3 className="mt-2 text-2xl font-bold leading-tight text-[#17375D] sm:text-3xl lg:text-4xl">
+      Club Activities
+    </h3>
+  </div>
 
-        <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D3131A] sm:text-base sm:tracking-[4px]">
-          Gallery
-        </span>
-
-        <h3 className="mt-2 text-2xl font-bold text-[#17375D] sm:text-3xl">
-          Club Activities
-        </h3>
-
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ y: -8 }}
-            className="group overflow-hidden rounded-2xl shadow-lg sm:rounded-3xl"
-          >
-            <img
-              src={image}
-              alt={`Club activity ${index + 1}`}
-              className="h-56 w-full object-cover transition duration-500 group-hover:scale-110 sm:h-72"
-            />
-          </motion.div>
-        ))}
-
-      </div>
-
-    </section>
+  {/* Gallery */}
+  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+    {images.map((image, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ y: -8 }}
+        className="group overflow-hidden rounded-2xl shadow-lg lg:rounded-3xl"
+      >
+        <img
+          src={image}
+          alt={`Club activity ${index + 1}`}
+          className="h-56 w-full object-cover transition duration-500 group-hover:scale-110 sm:h-64 md:h-72 lg:h-80"
+        />
+      </motion.div>
+    ))}
+  </div>
+</section>
   );
 };
 

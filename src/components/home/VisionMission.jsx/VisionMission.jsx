@@ -7,75 +7,76 @@ import missionImage from "../../../assets/images/Mission.webp";
 
 const VisionMission = () => {
     return (
-       <section className="bg-white py-14 sm:py-20 lg:py-24">
-    <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="bg-white py-16 sm:py-20 lg:py-24">
+  <div className="mx-auto w-[90%] max-w-7xl">
+    <div className="overflow-hidden rounded-2xl shadow-sm lg:rounded-[2rem]">
 
-        <div className="grid lg:grid-cols-2 overflow-hidden rounded-xl">
+      <div className="grid lg:grid-cols-2">
 
-            {/* Image */}
-            <img
-                src={visionImage}
-                alt=""
-                className="h-56 w-full object-cover sm:h-72 lg:h-[430px]"
-            />
+        {/* Vision Image */}
+        <img
+          src={visionImage}
+          alt="Vision"
+          className="h-64 w-full object-cover sm:h-80 md:h-[420px] lg:h-[480px]"
+        />
 
-            {/* Vision */}
-            <motion.div
-               
-                whileInView={{ opacity: 1, x: 0 }}
-               
-                className="bg-[#163A68] p-6 text-white sm:p-10 lg:h-[430px]"
-            >
-                <h2 className="mb-5 font-heading text-3xl font-light sm:mb-10 sm:text-5xl">
-                    Vision
-                </h2>
+        {/* Vision */}
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col justify-center bg-[#163A68] p-6 text-white sm:p-8 lg:h-[480px] lg:p-12"
+        >
+          <h2 className="mb-6 text-3xl font-light sm:text-4xl lg:mb-8 lg:text-5xl">
+            Vision
+          </h2>
 
-                <div className="space-y-2">
-                    {visionMissionData.vision.content.map((item, i) => (
-                        <div key={i} className="flex gap-4">
-                            <PiBookOpenTextFill className="text-red-500 mt-1 text-lg flex-shrink-0" />
-                            <p className="text-sm leading-6 sm:text-lg sm:leading-8">
-                                {item}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </motion.div>
+          <div className="space-y-4">
+            {visionMissionData.vision.content.map((item, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <PiBookOpenTextFill className="mt-1 shrink-0 text-lg text-[#D3131A]" />
 
-            {/* Mission */}
-            <motion.div
-                
-                whileInView={{ opacity: 1, x: 0 }}
-                
-                className="order-4 bg-[#163A68] p-6 text-white sm:p-10 lg:order-none lg:h-[430px] lg:p-14"
-            >
-                
-                <h2 className="mb-5 font-heading text-3xl font-light sm:mb-10 sm:text-5xl">
-                    Mission
-                </h2>
+                <p className="text-sm leading-7 sm:text-base sm:leading-8 lg:text-lg">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
-                <div className="space-y-3">
-                    {visionMissionData.mission.content.map((item, i) => (
-                        <div key={i} className="flex gap-4">
-                            <PiBookOpenTextFill className="text-red-500 mt-1 text-lg flex-shrink-0" />
-                            <p className="text-sm leading-6 sm:text-lg sm:leading-8">
-                                {item}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </motion.div>
+        {/* Mission */}
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="order-4 flex flex-col justify-center bg-[#163A68] p-6 text-white sm:p-8 lg:order-none lg:h-[480px] lg:p-12"
+        >
+          <h2 className="mb-6 text-3xl font-light sm:text-4xl lg:mb-8 lg:text-5xl">
+            Mission
+          </h2>
 
-            {/* Image */}
-            <img
-                src={missionImage}
-                alt=""
-                className="order-3 h-56 w-full object-cover sm:h-72 lg:order-none lg:h-[430px]"
-            />
+          <div className="space-y-4">
+            {visionMissionData.mission.content.map((item, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <PiBookOpenTextFill className="mt-1 shrink-0 text-lg text-[#D3131A]" />
 
-        </div>
+                <p className="text-sm leading-7 sm:text-base sm:leading-8 lg:text-lg">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Mission Image */}
+        <img
+          src={missionImage}
+          alt="Mission"
+          className="order-3 h-64 w-full object-cover sm:h-80 md:h-[420px] lg:order-none lg:h-[480px]"
+        />
+
+      </div>
 
     </div>
+  </div>
 </section>
     );
 };
