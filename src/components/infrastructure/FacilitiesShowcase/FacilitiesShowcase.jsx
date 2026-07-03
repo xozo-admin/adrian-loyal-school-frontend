@@ -17,34 +17,34 @@ const facilities = [
   },
   {
     id: 2,
-    title: "Advanced Composite Labs",
+    title: "Library",
     description:
-      `State-of-the-art facilities for Physics, Chemistry, and Biology. 
-      Hands-on exploration, and practical experiments that brings scientific concepts to life under expert supervision.`,
-    image: scienceLab,
+      `Our school takes pride in a well-stocked library that offers a wide variety of books to inspire and engage young minds. 
+      From fiction and non-fiction to reference books, magazines, and periodicals, our collection caters to diverse reading interests and academic needs.`,
+    image: library,
   },
   {
     id: 3,
-    title: "AI-Powered Computer Labs",
+    title: "AI-Powered Computer and Science Labs",
     description:
       `Cutting-edge labs that prepare students for future innovations in artificial intelligence and computing. 
-      Practical learning in coding, robotics, and computational thinking.`,
+     Students gain practical learning in coding, robotics, artificial intelligence, and computational thinking.`,
     image: computerLab,
   },
   {
     id: 4,
-    title: "Library",
+    title: "Advanced Composite Labs",
     description:
-      `Our school takes pride in a well-stocked library that offers a wide variety of books to inspire and engage young minds. 
-      From fiction and non-fiction to reference materials and periodicals, our collection caters to diverse reading interests and academic needs.`,
-    image: library,
+      `State-of-the-art facilities for Physics, Chemistry, and Biology. 
+      Hands-on exploration, practical experiments, and interactive learning help students bring classroom and scientific concepts to life under expert supervision.`,
+    image: scienceLab,
   },
   {
     id: 5,
     title: "Sensorial Learning Arena",
     description:
       `A thoughtfully crafted space encouraging sensory engagement and intellectual curiosity. 
-     Hands-on materials and engaging activities encourage cognitive development, strengthen critical thinking, and enhance problem-solving skills.`,
+     Hands-on materials and encourage cognitive development, strengthen critical thinking, and enhance problem-solving skills.`,
     image: activity,
   },
   {
@@ -87,21 +87,24 @@ const FacilitiesShowcase = () => {
               className={`overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl lg:rounded-[2rem] ${index === 0 || index === 5 ? "lg:col-span-2" : ""
                 }`}
             >
+           
               <div
                 className={`grid ${index === 0 || index === 5
                     ? "lg:grid-cols-[1.1fr_0.9fr]"
                     : "md:grid-cols-[280px_1fr]"
                   }`}
               >
+              
                 {/* Image */}
-                <div className="overflow-hidden">
+                {/* <div className="overflow-hidden"> */}
+                <div className="overflow-hidden h-full">
                   <img
                     src={facility.image}
                     alt={facility.title}
-                    className={`w-full object-cover transition duration-700 hover:scale-105 ${index === 0 || index === 5
-                        ? "h-60 sm:h-72 md:h-80 lg:h-[380px]"
-                        : "h-56 sm:h-64 md:h-full"
-                      }`}
+                     className={`w-full object-cover transition duration-700 hover:scale-105 ${index === 0 || index === 5
+                     ? "h-60 sm:h-72 md:h-80 lg:h-[380px]"
+                       : "h-56 sm:h-64 md:h-full"
+                       }`}
                   />
                 </div>
 
