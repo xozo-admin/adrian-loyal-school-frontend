@@ -39,17 +39,12 @@ const Navbar = () => {
   return (
     <>
       <header className="relative z-50 bg-white">
-        <div className="mx-auto max-w-[1920px] px-6 py-5 lg:px-10">
+        <div className="mx-auto max-w-[1920px] px-3 py-5 lg:px-10">
           {/* ================= MOBILE ================= */}
 
           <div className="flex items-center justify-between lg:hidden">
-            <Link to="/" className="flex items-center gap-3">
-              {/* <img
-                src={logo}
-                alt="The Adrian Loyal School"
-                className="h-16 w-auto object-contain"
-              /> */}
-              <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-white p-2">
+            <Link to="/" className="flex items-center gap-1 flex-1">
+              <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-white p-2">
                 <img
                   src={logo}
                   alt="School Logo"
@@ -57,16 +52,16 @@ const Navbar = () => {
                 />
               </div>
 
-              <div className="leading-tight">
-                <h2 className="text-[15px] font-extrabold uppercase tracking-wide text-[#17375D]">
+              <div className="min-w-0 flex-1 leading-tight">
+                <h2 className="whitespace-nowrap text-[14px] font-extrabold uppercase tracking-wide text-[#17375D] text-center">
                   THE ADRIAN LOYAL SCHOOL
                 </h2>
 
-                <p className="font-serif text-[12px] text-[#17375D]">
+                <p className="font-serif text-[12px] text-[#17375D] text-center">
                   Greatness - Sustainability - Legacy
                 </p>
 
-                <p className="text-[8px] font-semibold uppercase text-[#17375D]">
+                <p className="text-[8px] font-semibold uppercase text-[#17375D] text-center">
                   CBSE Affiliation No. 1931515
                 </p>
               </div>
