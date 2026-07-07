@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { FaTimes, FaChevronRight } from "react-icons/fa";
 
 import { navLinks } from "../../constants/navigation";
-import logo from "../../assets/images/logo.svg";
+import logo from "../../assets/images/logo.png";
 
 const MobileMenu = ({ isOpen, closeMenu }) => {
   const location = useLocation();
